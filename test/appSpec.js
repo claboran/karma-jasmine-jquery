@@ -11,7 +11,6 @@ describe('console html content', function() {
 
   it('index html', function() {
     expect($("h2")).toBeInDOM();
-    console.log("h2 text is :", $("h2").text());
     expect($("h2")).toContainText("this is index page");
   });
 
@@ -38,6 +37,34 @@ describe('console html content', function() {
     });
 
     expect(doneFn).toHaveBeenCalledWith('awesome response');
+  });
+
+  it("jquery ajax success", function () {
+    var result;
+    $.get("/jquery/ajax").success(function (data) {
+      result = data;
+    });
+
+    jasmine.Ajax.requests.mostRecent().response({
+      "status": 200,
+      "contentType": 'text/plain',
+      "responseText": 'data from mock ajax'
+    });
+
+    expect(result).toEqual('data from mock ajax');
+  });
+
+  it("jquery ajax error", function () {
+    var status;
+    $.get("/jquery/ajax").error(function (response) {
+      status = response.status;
+    });
+
+    jasmine.Ajax.requests.mostRecent().response({
+      "status": 400
+    });
+
+    expect(status).toEqual(400);
   });
 
   afterEach(function() {
