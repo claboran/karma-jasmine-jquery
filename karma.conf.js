@@ -23,6 +23,7 @@ module.exports = function(config) {
         },
 		'bower_components/jquery/dist/jquery.js',
         'bower_components/jasmine-jquery/lib/jasmine-jquery.js',
+        'bower_components/jasmine-ajax/lib/mock-ajax.js',
 		'test/*.js'
     ],
 
