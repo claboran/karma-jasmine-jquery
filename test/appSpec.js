@@ -39,9 +39,9 @@ describe('console html content', function() {
     expect(doneFn).toHaveBeenCalledWith('awesome response');
   });
 
-  it("jquery ajax success", function () {
+  it("jquery ajax success", function() {
     var result;
-    $.get("/jquery/ajax").success(function (data) {
+    $.get("/jquery/ajax").success(function(data) {
       result = data;
     });
 
@@ -54,9 +54,9 @@ describe('console html content', function() {
     expect(result).toEqual('data from mock ajax');
   });
 
-  it("jquery ajax error", function () {
+  it("jquery ajax error", function() {
     var status;
-    $.get("/jquery/ajax").error(function (response) {
+    $.get("/jquery/ajax").error(function(response) {
       status = response.status;
     });
 
