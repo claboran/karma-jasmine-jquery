@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "grunt",
-     "start": "npm install; bower install;"
+    "start": "npm install; bower install;"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "grunt-karma": "^0.8.3",
     "karma": "^0.12.22",
     "karma-chrome-launcher": "^0.1.4",
-    "karma-jasmine": "^0.1.5"
+    "karma-jasmine": "^0.1.5",
+    "load-grunt-tasks": "^0.6.0"
   }
 }

@@ -4,7 +4,7 @@
 
 
 module.exports = function(grunt) {
- grunt.loadNpmTasks('grunt-karma');
+   require('load-grunt-tasks')(grunt);
     // Project configuration.
     grunt.initConfig({
 
