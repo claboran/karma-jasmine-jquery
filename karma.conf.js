@@ -22,7 +22,6 @@ module.exports = function(config) {
           served: true
         },
 		'bower_components/jquery/dist/jquery.js',
-        'bower_components/jasmine/lib/jasmine-core.js',
         'bower_components/jasmine-jquery/lib/jasmine-jquery.js',
 		'test/*.js'
     ],
