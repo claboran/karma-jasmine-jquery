@@ -7,6 +7,9 @@ describe('console html content', function() {
 
   beforeEach(function() {
     jasmine.Ajax.install();
+    jasmine.Ajax.requests.when = function (url) {
+      return this.filter("/jquery/ajax")[0];
+    };
   });
 
   it('index html', function() {
@@ -45,7 +48,7 @@ describe('console html content', function() {
       result = data;
     });
 
-    jasmine.Ajax.requests.mostRecent().response({
+    jasmine.Ajax.requests.when("/jquery/ajax").response({
       "status": 200,
       "contentType": 'text/plain',
       "responseText": 'data from mock ajax'
@@ -60,7 +63,7 @@ describe('console html content', function() {
       status = response.status;
     });
 
-    jasmine.Ajax.requests.mostRecent().response({
+    jasmine.Ajax.requests.when("/jquery/ajax").response({
       "status": 400
     });
 
