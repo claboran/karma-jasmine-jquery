@@ -1,0 +1,20 @@
+{
+  "name": "karma-jasmine-jquery",
+  "version": "0.0.0",
+  "homepage": "https://github.com/greengerong/karma-jasmine-jquery",
+  "authors": [
+    "greengerong <grzx2210@163.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jasmine-jquery": "1.7.0",
+    "jquery": "~2.1.1"
+  }
+}

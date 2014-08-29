@@ -1,16 +1,22 @@
 {
   "name": "karma-jasmine-jquery",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grunt",
+     "start": "npm install; bower install;"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-karma": "^0.8.3",
-    "karma": "^0.12.22"
+    "karma": "^0.12.22",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-jasmine": "^0.1.5"
   }
 }
