@@ -12,13 +12,14 @@ module.exports = function(grunt) {
         karma: {
             options :{
                  configFile: 'karma.conf.js', 
-                 runnerPort: 9999,
-                 browsers: ['Chrome'],
+                 runnerPort: 9999
+                 
             },
               unit: {
                 singleRun: true,
                 autoWatch: false,
-                logLevel: 'ERROR'
+                logLevel: 'ERROR',
+                browsers: ['PhantomJS']
               },
               dev: {
                 singleRun: false,

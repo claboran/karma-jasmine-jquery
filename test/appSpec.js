@@ -6,10 +6,10 @@ describe('console html content', function() {
   });
 
   beforeEach(function() {
-    jasmine.Ajax.install();
     jasmine.Ajax.requests.when = function (url) {
       return this.filter("/jquery/ajax")[0];
     };
+    jasmine.Ajax.install();
   });
 
   it('index html', function() {
