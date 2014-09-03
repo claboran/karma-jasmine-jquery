@@ -42,9 +42,9 @@ describe('console html content', function() {
     expect(doneFn).toHaveBeenCalledWith('awesome response');
   });
 
-  it("jquery ajax success", function() {
+  it("jquery ajax success with getResponse", function() {
     var result;
-    $.get("/jquery/ajax").success(function(data) {
+    getResponse().then(function(data){
       result = data;
     });
 
